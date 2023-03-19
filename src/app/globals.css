@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
-@tailwind base;
+/* @tailwind base;
 @tailwind components;
-@tailwind utilities;
+@tailwind utilities; */
 
 * {
     font-family: 'Inter', sans-serif;
@@ -60,6 +60,7 @@ p {
     font-weight: 300;
     font-size: 16px;
     line-height: 30px;
+    text-decoration: none;
 }
 
 p a {
@@ -74,55 +75,7 @@ p a:hover {
     font-size: 16px;
     color: #959595;
     text-decoration: none;
-    margin-right: 10px;
     font-weight: 300;
-}
-
-.tab {
-    background: none;
-    cursor: pointer;
-    border: none;
-    font-weight: 300;
-    font-size: 20px;
-    line-height: 38px;
-    padding: 0;
-    margin-right: 50px;
-    margin-bottom: 20px;
-    opacity: 0.5;
-}
-
-.tab.selected {
-    opacity: 1;
-}
-
-img {
-    width: 700px;
-}
-
-.product-cards {
-    border: 1px solid #bbb;
-    padding: 40px;
-    border-radius: 16px;
-    margin-bottom: 32px;
-    margin-top: 22px;
-}
-
-.product-cards h2 {
-    font-size: 32px;
-    font-weight: 500;
-    margin-bottom: 10px;
-    letter-spacing: 3px;
-}
-
-.product-cards p {
-    font-size: 18px;
-    font-weight: 300;
-    margin-bottom: 0;
-    margin-top: 0;
-}
-
-.product-cards img {
-    width: 100%;
 }
 
 .underline {
@@ -131,6 +84,19 @@ img {
 
 .underline:hover {
     border-bottom: 1px solid #959595;
+}
+
+.underline1 {
+  border-bottom: 1px solid #2B2B2B;
+  font-size: 16px;
+  text-decoration: none;
+  margin-right: 0px;
+  font-weight: 300;
+}
+
+.underline1:hover {
+  border-bottom: 1px solid #959595;
+  margin-right: 0px;
 }
 
 .card-wrapper {
@@ -148,16 +114,33 @@ hr {
     justify-content: space-between;
 }
 
+.companyCardContents a {
+  color:#2B2B2B;
+  text-decoration: none;
+}
+
 .companyCardContents a:hover {
     display: flex;
     justify-content: space-between;
     color: #959595;
+    text-decoration: none;
 }
 
 .companyCardContents p {
     font-weight: 300;
     margin-bottom: 0;
+    margin-top: 0;
     font-size: 16px;
+    text-decoration: none;
+}
+
+.companyCardContents p a {
+  font-weight: 300;
+  margin-bottom: 0;
+  margin-top: 0;
+  font-size: 16px;
+  text-decoration: none;
+  color:#2B2B2B;
 }
 
 .social-links {

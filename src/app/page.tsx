@@ -1,91 +1,46 @@
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
-import styles from './page.module.css'
+import Company from "./components/Company";
+import companies from "./data/Companies";
+import { useState } from "react";
+import Head from "next/head";
 
-const inter = Inter({ subsets: ['latin'] })
-
-export default function Home() {
+export default function Index() {
   return (
-    <main className={styles.main}>
-      <div className="text-3xl font-bold underline">
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
+      <>
+      <Head>
+          <title>Quokka</title>
+          <meta name= "Quokka" content="Investments"/>
+      </Head>
+
+      <div id = "container">
+
+      <div id = "top-section">
+          <>
+              <h2>Quokka Ventures</h2>
+              <p className = "description">
+                  We back founders who set out to do the impossible. Your can join our <a href="https://www.angellist.com/" className="underline1">Angellist</a> syndicate to stay up to date
+                  on deal opportunities.
+              </p>
+
+              <p className="social-links">
+                  <a href = "https://www.linkedin.com/in/taryn-e-livingstone/"> <span className="underline">Taryn </span>&#x2197;</a> 
+                  <a href = "https://www.linkedin.com/in/vishnu-s-857aa8132/"> <span className="underline">Vishnu </span>&#x2197;</a> 
+              </p>
+              </>
+
+              <h2>Select Investments</h2>
+                  <div className = "">
+                  {companies.map(d => (
+                      <Company
+                          name={d.name}
+                          description={d.description}
+                          link={d.link}
+                          />
+                  ))}
+                  </div>
+
+          </div>
+
       </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-        <div className={styles.thirteen}>
-          <Image src="/thirteen.svg" alt="13" width={40} height={31} priority />
-        </div>
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://beta.nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={inter.className}>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p className={inter.className}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+      </>
+  );
 }

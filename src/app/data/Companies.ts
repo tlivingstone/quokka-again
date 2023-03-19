@@ -29,12 +29,12 @@ const companies = [
         description: "Automated institutional DeFi",
         link: "https://www.opde.fi/"
     },
-    {
-        name: "Ostium",
-        description: "Stealth",
-        link: "#"
-    }
-    ,
+    // {
+    //     name: "Ostium",
+    //     description: "Stealth",
+    //     link: "#"
+    // }
+    // ,
     {
         name: "Reactor",
         description: "Simulation",
