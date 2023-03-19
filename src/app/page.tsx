@@ -28,9 +28,9 @@ export default function Index() {
               </>
 
               <h2>Select Investments</h2>
-                  <div className = "">
+                  <div className = "flex">
                   {companies.map(d => (
-                      <Company
+                      <Company key="1"
                           name={d.name}
                           description={d.description}
                           link={d.link}
