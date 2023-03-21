@@ -27,7 +27,7 @@ export default function Index() {
               </p>
               </>
 
-              <h2>Select Investments</h2>
+              <h2>Select Prior GP Investments</h2>
                   <div className = "flex">
                   {companies.map(d => (
                       <Company key="1"
