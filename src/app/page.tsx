@@ -17,7 +17,7 @@ export default function Index() {
           <>
               <h2>Quokka Ventures</h2>
               <p className = "description">
-                  We back founders who set out to do the impossible. Your can join our <a href="https://www.angellist.com/" className="underline1">Angellist</a> syndicate to stay up to date
+                  We back founders who set out to do the impossible. Your can join our <a href="https://angellist.com/s/vishnu-srinivasan/zu19W" className="underline1">Angellist</a> syndicate to stay up to date
                   on deal opportunities.
               </p>
 
